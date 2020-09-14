@@ -1,0 +1,16 @@
+plugins:
+  source:
+    - module: intake_xarray
+sources:
+  unidata:
+    description: CREATE sample
+    driver: opendap
+    #cache:
+    #  - argkey: urlpath
+    #    regex: ''
+    #    type: file
+    args:
+      urlpath: 'https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/WW3/Global/Best'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: True
