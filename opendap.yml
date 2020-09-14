@@ -2,9 +2,14 @@ plugins:
   source:
     - module: intake_xarray
 sources:
-  unidata:
-    description: CREATE sample
+  ww3:
+    description: Best time-series forecast from the Global WaveWatch III wave model
     driver: opendap
+    metadata:
+      url: 'https://polar.ncep.noaa.gov/waves/'
+      tags:
+        - ocean
+        - model
     #cache:
     #  - argkey: urlpath
     #    regex: ''
