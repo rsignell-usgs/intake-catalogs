@@ -1,0 +1,57 @@
+sources:
+
+  matanzas:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Matanzas breach'
+    args:
+      urlpath: "reference://"
+      consolidated: False
+      storage_options:
+        target_options:
+          anon: true
+        fo: 's3://prod-is-usgs-sb-prod-publish/609bf69ed34ea221ce39b261/breach_matanzas.json'
+        remote_options:
+          anon: true
+        remote_protocol: s3
+        
+  wilderness_veg:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Wilderness breach simulation with vegetation'
+    args:
+      urlpath: "reference://"
+      consolidated: False
+      storage_options:
+        target_options:
+          anon: true
+        fo: 's3://prod-is-usgs-sb-prod-publish/609bf69ed34ea221ce39b261/breach_wilderness_veg.json'
+        remote_options:
+          anon: true
+        remote_protocol: s3
+
+  wilderness_zonovary:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Wilderness breach simulation with constant z0'
+    args:
+      urlpath: "reference://"
+      consolidated: False
+      storage_options:
+        target_options:
+          anon: true
+        fo: 's3://prod-is-usgs-sb-prod-publish/609bf69ed34ea221ce39b261/breach_wilderness_zonovary.json'
+        remote_options:
+          anon: true
+        remote_protocol: s3
+        
+  wilderness_zovary:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Wilderness breach simulation with variable z0'
+    args:
+      urlpath: "reference://"
+      consolidated: False
+      storage_options:
+        target_options:
+          anon: true
+        fo: 's3://prod-is-usgs-sb-prod-publish/609bf69ed34ea221ce39b261/breach_wilderness_zovary.json'
+        remote_options:
+          anon: true
+        remote_protocol: s3
